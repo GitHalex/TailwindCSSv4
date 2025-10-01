@@ -1,5 +1,6 @@
 html {
   box-sizing: border;
+  scroll-behavior: smooth;
 }
 *,
 *::after,

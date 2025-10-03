@@ -15,3 +15,7 @@ body {
   background: #f4f4f4;
   color: #333;
 }
+
+.selectores-atributos a[target="_blank"] {
+  color: red;
+}

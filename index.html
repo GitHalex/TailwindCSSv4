@@ -85,6 +85,77 @@
       <li><b>Otoño</b></li>
       <li><b>Invierno</b></li>
     </ul>
+    <h3>Selectores de Atributos</h3>
+    <nav class="[&_a[href]]:text-yellow-500">
+      <ul>
+        <li><a href="https://jonmircha.com" target="_blank">Inicio</a></li>
+        <li><a href="https://jonmircha.com/cursos" target="_blank">Cursos</a></li>
+        <li><a href="https://jonmircha.com/blog" target="_blank">Blog</a></li>
+        <li><a href="https://jonmircha.com/cv" target="_blank">CV</a></li>
+        <li><a href="https://jonmircha.com/ahora" target="_blank">Ahora</a></li>
+        <li><a href="https://jonmircha.com/notas">Notas</a></li>
+      </ul>
+    </nav>
+    <!-- SEgun la Ia me Reocmendo usar en este caso el metodo normal de css -->
+    <!-- el comodin del * aplica el estilo si contiene la palabra en cuestion -->
+    <nav class="selectores-atributos [&_a[href*='jonmircha']]:text-2xl">
+      <ul>
+        <li><a href="https://jonmircha.com" target="_blank">Inicio</a></li>
+        <li><a href="https://jonmircha.com/cursos" target="_blank">Cursos</a></li>
+        <li><a href="https://jonmircha.com/blog" target="_blank">Blog</a></li>
+        <li><a href="https://jonmircha.com/cv" target="_blank">CV</a></li>
+        <li><a href="https://jonmircha.com/ahora" target="_blank">Ahora</a></li>
+        <li><a href="https://jonmircha.com/notas">Notas</a></li>
+        <li><a href="#temarios-css-">TEmario de Css</a></li>
+      </ul>
+    </nav>
+    <hr>
+    <!-- el comodin del ^ aplica el estilo si empieza por la palabra en cuestion al inicio -->
+    <nav class="[&_a[href^='https']]:text-lime-400">
+      <ul>
+        <li><a href="https://jonmircha.com" target="_blank">Inicio</a></li>
+        <li><a href="https://jonmircha.com/cursos" target="_blank">Cursos</a></li>
+        <li><a href="http://jonmircha.com/blog" target="_blank">Blog</a></li>
+        <li><a href="https://jonmircha.com/cv" target="_blank">CV</a></li>
+        <li><a href="https://jonmircha.com/ahora" target="_blank">Ahora</a></li>
+        <li><a href="http://jonmircha.com/notas">Notas</a></li>
+        <li><a href="#temarios-css-">TEmario de Css</a></li>
+      </ul>
+    </nav>
+    <hr>
+
+    <!-- el comodin del $ aplica el estilo si empieza por la palabra en cuestion al final -->
+    <nav class="[&_a[href$='.com']]:text-blue-400">
+      <ul>
+        <li><a href="https://jonmircha.com" target="_blank">Inicio</a></li>
+        <li><a href="https://jonmircha.com/cursos" target="_blank">Cursos</a></li>
+        <li><a href="http://jonmircha.com/blog" target="_blank">Blog</a></li>
+        <li><a href="https://jonmircha.com/cv" target="_blank">CV</a></li>
+        <li><a href="https://jonmircha.com/ahora" target="_blank">Ahora</a></li>
+        <li><a href="http://jonmircha.com/notas">Notas</a></li>
+        <li><a href="#temarios-css-">TEmario de Css</a></li>
+      </ul>
+    </nav>
+    <hr>
+    <!-- el comodin del ~ aplica el estilo si continen el texto en cuestio en una lista separado por espacios  -->
+    <nav class="[&_a[class~='cursos']]:text-blue-950 [&_a[class~='cursos']]:bg-yellow-300">
+      <ul>
+        <li><a href="https://jonmircha.com" target="_blank">Inicio</a></li> <!-- ❌ No azul -->
+        <li><a class="menu-curso cursos" href="#">Cursos</a></li> <!-- ✅ Azul (tiene clase 'cursos') -->
+        <li><a href="#temario-css">Temario</a></li> <!-- ❌ No azul -->
+      </ul>
+    </nav>
+    <hr>
+    <!-- el comodin del | aplica el estilo si continen el texto en cuestio en una lista separado por espacios y que despues del texto en cuestion puede venir un guin medio -  -->
+    <nav class="[&_a[class|='menu']]:text-sky-400 [&_a[class|='menu']]:bg-pink-300 italic">
+      <ul>
+        <li><a href="https://jonmircha.com" target="_blank">Inicio</a></li> <!-- ❌ No azul -->
+        <li><a class="menu-item cursos" href="#">Cursos</a></li> <!-- ✅ Azul (tiene clase 'cursos') -->
+        <li><a href="#temario-css">Temario</a></li> <!-- ❌ No azul -->
+        <li><a class="menu item ahora cursos" href="#">ahora</a></li> <!-- ✅ Azul (tiene clase 'cursos') -->
+      </ul>
+    </nav>
+    <a href="index.html#temarios-css">👆🏻</a>
   </article>
   <!-- Hijos directos vs descendientes con estructura anidada -->
 

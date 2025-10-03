@@ -33,8 +33,61 @@
   </article>
   <hr>
   <article id="selectores-avanzados">
+    <h2>Selectores Avanzados</h2>
+    <h3>Selectores de hijos</h3>
+    <h4>Selector de hijos directos</h4>
+    <ul class="hijos-directos [&>li]:bg-red-500">
+      <li><b>Verano</b></li>
+      <li><b>Primavera</b></li>
+      <li><b>Otoño</b></li>
+      <li><b>Invierno</b></li>
+    </ul>
+    <h4>Selector de hijos descendientes</h4>
+    <ul class="hijos-descendientes [&_li_b]:bg-green-500">
+      <li><b>Verano</b></li>
+      <li><b>Primavera</b></li>
+      <li><b>Otoño</b></li>
+      <li><b>Invierno</b></li>
+    </ul>
+    <ul class="border [&>li]:bg-red-300">
+      <li>Nivel 1 - Hijo directo ✅</li>
+      <li>
+        Nivel 1 - Hijo directo ✅
+        <ul>
+          <li>Nivel 2 - NO hijo directo ❌</li>
+        </ul>
+      </li>
+    </ul>
+
+    <ul class="border [&_li]:bg-green-300 mt-4">
+      <li>Nivel 1 - Descendiente ✅</li>
+      <li>
+        Nivel 1 - Descendiente ✅
+        <ul>
+          <li>Nivel 2 - Descendiente ✅</li>
+        </ul>
+      </li>
+    </ul>
+
     <a href="index.html#temarios-css">👆🏻</a>
+    <h3>Selectores de Hermanos</h3>
+    <h4>Selector de Heermanos (en general)</h4>
+    <ul class="[&_.hermanos-general~li]:bg-yellow-300">
+      <li><b>Verano</b></li>
+      <li class="hermanos-general"><b>Primavera</b></li>
+      <li><b>Otoño</b></li>
+      <li><b>Invierno</b></li>
+    </ul>
+    <h4>Selector de Heermanos adyacentes</h4>
+    <ul class="[&_.hermanos-general+li]:bg-yellow-300">
+      <li><b>Verano</b></li>
+      <li class="hermanos-general"><b>Primavera</b></li>
+      <li><b>Otoño</b></li>
+      <li><b>Invierno</b></li>
+    </ul>
   </article>
+  <!-- Hijos directos vs descendientes con estructura anidada -->
+
 
   <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
   <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>

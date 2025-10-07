@@ -9,13 +9,13 @@
 </head>
 
 <body>
-  <article class="[&_*]:font-mono">
-    <h1 id="temarios-css" class="text-lime-400 text-center p-4 text-xl">Aprendiendo CSS</h1>
+  <article class="[&_*]:font-mono [&_#temarios-css:target]:bg-purple-500 [&_#temarios-css:target]:text-white">
+    <h1 class="text-lime-400 text-center p-4 text-xl">Aprendiendo CSS</h1>
     <p>
       <i class="font-bold text-orange-600">Cascading Style Sheetes</i>
       - Hojas de Estilo en Cascada
     </p>
-    <div class="bg-cyan-500 italic font-xl text-sky-50 border-4 border-sky-500 rounded-lg">
+    <div id="temarios-css" class="bg-cyan-500 italic font-xl text-sky-50 border-4 border-sky-500 rounded-lg">
       <h2 class="text-2xl text-center">Temario Del curso</h2>
       <ul class="list-disc ml-auto mr-auto w-fit">
         <li><a href="index.html#selectores-basicos">Selectores basicos</a></li>
@@ -171,7 +171,101 @@
       <input type="submit" value="Enviar Deshabilitado" disabled>
     </form>
 
+    <nav
+      class="[&_a:hover]:text-orange-600 [&_a:focus]:text-green-500 [&_a:focus]:underline [&_a:active]:text-blue-500 [&_a:active]:underline">
+      <a href="#seccion1">Seccion1</a>
+      <a href="#seccion2">Seccion2</a>
+      <a href="#seccion3">Seccion3</a>
+      <a href="#seccion4">Seccion4</a>
+    </nav>
 
+    <!-- Navegación -->
+    <nav class="mb-4">
+      <a href="#seccion1" class="bg-blue-500 text-white px-4 py-2 rounded">Sección 1</a>
+      <a href="#seccion2" class="bg-blue-500 text-white px-4 py-2 rounded">Sección 2</a>
+      <a href="#seccion3" class="bg-blue-500 text-white px-4 py-2 rounded">Sección 3</a>
+    </nav>
+
+    <!-- Contenido que cambia con :target -->
+    <div class="[&_:target]:bg-yellow-300 [&_:target]:p-6 [&_:target]:border-4 [&_:target]:border-red-500">
+      <section id="seccion1" class="p-4 border mb-2">
+        <h3>Sección 1</h3>
+        <p>Haz click en "Sección 1" arriba para ver el efecto</p>
+      </section>
+
+      <section id="seccion2" class="p-4 border mb-2">
+        <h3>Sección 2</h3>
+        <p>Haz click en "Sección 2" arriba para ver el efecto</p>
+      </section>
+
+      <section id="seccion3" class="p-4 border mb-2">
+        <h3>Sección 3</h3>
+        <p>Haz click en "Sección 3" arriba para ver el efecto</p>
+      </section>
+    </div>
+    <hr>
+
+    <!-- Navegación de pestañas -->
+    <nav class="flex space-x-4 mb-4">
+      <a href="#tab1" class="bg-gray-200 px-4 py-2 rounded">Pestaña 1</a>
+      <a href="#tab2" class="bg-gray-200 px-4 py-2 rounded">Pestaña 2</a>
+      <a href="#tab3" class="bg-gray-200 px-4 py-2 rounded">Pestaña 3</a>
+    </nav>
+
+    <!-- Contenido de pestañas -->
+    <div
+      class="[&_div]:hidden [&_div:target]:block [&_div:target]:bg-yellow-100 [&_div:target]:p-6 [&_div:target]:border">
+      <div id="tab1">
+        <h3>Contenido Pestaña 1</h3>
+        <p>Este contenido se muestra cuando haces click en "Pestaña 1"</p>
+      </div>
+
+      <div id="tab2">
+        <h3>Contenido Pestaña 2</h3>
+        <p>Este contenido se muestra cuando haces click en "Pestaña 2"</p>
+      </div>
+
+      <div id="tab3">
+        <h3>Contenido Pestaña 3</h3>
+        <p>Este contenido se muestra cuando haces click en "Pestaña 3"</p>
+      </div>
+    </div>
+
+    <hr>
+    <!-- Es más predecible que CSS normal porque el orden en el atributo class determina qué estilo gana, sin cálculos complejos -->
+    <!-- de especificidad -->
+    <h3>Pseudoclases de posición en lista</h3>
+    <ul class="[&_li:first-child]:bg-red-500 [&_li:last-child]:bg-blue-500
+               [&_li:nth-child(3)]:bg-green-500 [&_li:nth-child(3n+1)]:bg-purple-500
+               [&_li:nth-child(4n)]:bg-yellow-300 [&_li:nth-child(odd)]:text-gray-700
+               [&_li:nth-child(even)]:font-bold [&_li]:p-2 [&_li]:mb-1 [&_li]:text-white">
+
+      <li>1 - Rojo (first) + Gris (odd) + Purple (3n+1)</li>
+      <li>2 - Negrita (even)</li>
+      <li>3 - Verde (nth-child(3)) + Gris (odd)</li>
+      <li>4 - Negrita (even) + Amarillo (4n)</li>
+      <li>5 - Azul (last) + Gris (odd) + Purple (3n+1)</li>
+      <li>6 - Azul (last) + Gris (odd) + Purple (3n+1)</li>
+      <li>7 - Azul (last) + Gris (odd) + Purple (3n+1)</li>
+      <li>8 - Azul (last) + Gris (odd) + Purple (3n+1)</li>
+      <li>9 - Azul (last) + Gris (odd) + Purple (3n+1)</li>
+      <li>10 - Azul (last) + Gris (odd) + Purple (3n+1)</li>
+      <li>11 - Azul (last) + Gris (odd) + Purple (3n+1)</li>
+      <li>12 - Azul (last) + Gris (odd) + Purple (3n+1)</li>
+    </ul>
+
+    <article class="articulo-pseudoclases">
+      <header>Esto es un header</header>
+      <p>esto es una p</p>
+      <div>div</div>
+      <p>esto es una p</p>
+      <p>esto es una p</p>
+      <section>section</section>
+      <p>esto es una p</p>
+      <div>esto es una div</div>
+      <p>esto es una p</p>
+      <footer>Esto es un footer</footer>
+    </article>
     <a href="index.html#temarios-css">👆🏻</a>
 
 

@@ -20,6 +20,12 @@
       <ul class="list-disc ml-auto mr-auto w-fit">
         <li><a href="index.html#selectores-basicos">Selectores basicos</a></li>
         <li><a href="#selectores-avanzados">Selectores avanzados</a></li>
+        <li><a href="#pseudoclases">Pseudoclases</a></li>
+        <li><a href="#agrupar-selectores">Agrupar selectores</a></li>
+        <li><a href="#pseudoelementos">Pseudoelementos</a></li>
+        <li><a href="#pseudoelementos">Pseudoelementos</a></li>
+        <li><a href="#pseudoelementos">Pseudoelementos</a></li>
+        <li><a href="#pseudoelementos">Pseudoelementos</a></li>
       </ul>
     </div>
   </article>
@@ -159,7 +165,7 @@
   </article>
   <hr>
   <!-- Pseudoclases - Dan estilos dependiendo del contexto, posicion o estado del elemento -->
-  <article id="pseudoclases">
+  < id="pseudoclases">
     <h2>Pseudoclases</h2>
     <form action=""
       class="[&_input]:border-2 [&_input]:p-3 [&_input]:rounded [&_input]:mb-3 [&_input:required]:bg-green-100 [&_input:valid]:border-green-500 [&_input:invalid]:border-red-600 [&_input:focus]:!bg-cyan-100 [&_input:disabled]:bg-gray-300 [&_input:disabled]:cursor-not-allowed">
@@ -274,15 +280,50 @@
       <footer>Esto es un footer</footer>
     </article>
     <a href="index.html#temarios-css">👆🏻</a>
+    <hr>
+    <!-- Pseudoelementos - Permiten crear elementos ficticios que no existen en el HTML pero que pueden ser estilizados con CSS -->
+    <article id="pseudoelementos" class="[&_h2]:before:content-['🔮_'] [&_h2]:after:content-['_✨']">
+      <h2 class="before:text-red-500 after:text-blue-500">Pseudoelementos</h2>
+      <h3>Antes y después</h3>
+      <p>
+        <i>Bandai Myth Cloth Ex</i> <span>Saga de Geminis</span>
+      </p>
+
+      <p>
+        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sapiente cumque magni repellat? Iusto magnam illo
+        repudiandae debitis, aliquid esse voluptatibus, officiis eius natus ducimus itaque maiores quaerat rerum odio
+        quam.
+      </p>
+      <a href="index.html#temarios-css">👆🏻</a>
+    </article>
+    <article id="agrupar-selectores">
+      <h2 class="text-2xl text-center p-2 text-blue-900">Agrupar Selectores</h2>
+      <form class="form-agrupar-selectores flex flex-col border p-6 rounded justify-center items-center max-w-sm mx-auto
+                  [&_input,&_textarea]:w-full [&_input,&_textarea]:p-3 [&_input,&_textarea]:mb-4
+                  [&_input,&_textarea]:border-2 [&_input,&_textarea]:rounded
+                  
+                  /* Estados de validación */
+                  [&_input:valid,&_textarea:valid]:border-green-500
+                  [&_input:invalid,&_textarea:invalid]:border-red-500
+                  [&_input:required,&_textarea:required]:bg-yellow-50
+                  
+                  /* Botón de envío */
+                  [&_input[type='submit']]:bg-green-500 [&_input[type='submit']]:text-white
+                  [&_input[type='submit']]:hover:bg-green-600">
+
+        <input type="text" name="nombre" placeholder="Nombre (requerido)" required>
+        <input type="email" name="correo" placeholder="Correo (requerido)" required>
+        <textarea name="comentarios" placeholder="Mensaje (opcional)"></textarea>
+        <input type="submit" value="Enviar Formulario">
+      </form>
+      <a href="index.html#temarios-css">👆🏻</a>
+    </article>
 
 
-  </article>
 
-
-
-  <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-  <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-  <h3>Pruebas</h3>
+    <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+    <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+    <h3>Pruebas</h3>
 </body>
 
 </html>"""

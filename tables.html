@@ -14,29 +14,84 @@
 </head>
 
 <body>
-  <h1
-    class="bg-zinc-800 text-rose-200 border-1 border-green-300 p-4 text-center font-mono text-3xl border-dashed opacity-60">
-    Estilos de Imagenes en Css</h1>
-  <h2 class="bg-teal-500 p-1.5 border-1">listas doseordenadas &</h2>
-  <ul class="list-disc">
-    <li>Now this is a story all about how, my life got flipped-turned upside down</li>
-    <!-- ... -->
-  </ul>
-  <ol class="list-disc">
-    <li>Now this is a story all about how, my life got flipped-turned upside down</li>
-    <!-- ... -->
-  </ol>
-  <ul class="list-none">
-    <li>Now this is a story all about how, my life got flipped-turned upside down</li>
-    <!-- ... -->
-  </ul>
-
-  <ul class="list-image-[url(../assets/check.svg)]">
-
-    <li class="list-decimal ">5 cups chopped Porcini mushrooms</li>
-    <!-- ... -->
-  </ul>
-
+  <h1 class="text-3xl text-center p-2 text-blue-800 bg-blue-100">Tablas en TailwindCSS</h1>
+  <div
+    class="relative overflow-x-auto bg-neutral-primary-soft shadow-xs rounded-base border border-default bg-blue-200 p-4 m-4">
+    <table class="w-full text-sm text-left rtl:text-right text-body">
+      <thead class="text-sm text-body bg-neutral-secondary-soft border-b rounded-base border-default">
+        <tr>
+          <th scope="col" class="px-6 py-3 font-medium">
+            Product name
+          </th>
+          <th scope="col" class="px-6 py-3 font-medium">
+            Color
+          </th>
+          <th scope="col" class="px-6 py-3 font-medium">
+            Category
+          </th>
+          <th scope="col" class="px-6 py-3 font-medium">
+            Price
+          </th>
+          <th scope="col" class="px-6 py-3 font-medium">
+            Stock
+          </th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr class="bg-neutral-primary border-b border-default">
+          <th scope="row" class="px-6 py-4 font-medium text-heading whitespace-nowrap">
+            Apple MacBook Pro 17"
+          </th>
+          <td class="px-6 py-4">
+            Silver
+          </td>
+          <td class="px-6 py-4">
+            Laptop
+          </td>
+          <td class="px-6 py-4">
+            $2999
+          </td>
+          <td class="px-6 py-4">
+            231
+          </td>
+        </tr>
+        <tr class="bg-neutral-primary border-b border-default">
+          <th scope="row" class="px-6 py-4 font-medium text-heading whitespace-nowrap">
+            Microsoft Surface Pro
+          </th>
+          <td class="px-6 py-4">
+            White
+          </td>
+          <td class="px-6 py-4">
+            Laptop PC
+          </td>
+          <td class="px-6 py-4">
+            $1999
+          </td>
+          <td class="px-6 py-4">
+            423
+          </td>
+        </tr>
+        <tr class="bg-neutral-primary">
+          <th scope="row" class="px-6 py-4 font-medium text-heading whitespace-nowrap">
+            Magic Mouse 2
+          </th>
+          <td class="px-6 py-4">
+            Black
+          </td>
+          <td class="px-6 py-4">
+            Accessories
+          </td>
+          <td class="px-6 py-4">
+            $99
+          </td>
+          <td class="px-6 py-4">
+            121
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
 
 
 
